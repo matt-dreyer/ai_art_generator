@@ -30,6 +30,10 @@ Models included by default include:
 ## Installation
 
 ```bash
+git clone https://github.com/matt-dreyer/ai_art_generator.git
+```
+
+```bash
 pip install -r requirements.txt
 ```
 
