@@ -1,0 +1,2 @@
+#please add your prompt (max tokens 77) below
+a cute dog, outside
