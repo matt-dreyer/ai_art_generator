@@ -10,7 +10,7 @@ This script generates AI-based artwork based on a text prompt. It uses various m
 - Python 3.x
 
 ## Text-to-Image Models
-By default the script is configured to automatically download and use several models hosted by Hugging Face. The user has the option to manually download and use .safetensor models that can be found on various websites.
+By default the script is configured to automatically download and use several models hosted by Hugging Face. The user has the option to manually download and use .safetensors models that can be found on various websites.
 
 Models included by default include:
  - plasmo/vox2
