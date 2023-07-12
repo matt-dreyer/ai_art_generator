@@ -5,7 +5,8 @@ This script generates AI-based artwork based on a text prompt. It uses various m
 
 
 ### Requirements
-- NVIDIA GPU and the required CUDA drivers installed, see https://developer.nvidia.com/cuda-downloads
+- PC with an NVIDIA GPU (tested on a Dell Precision 5570 laptop with integrated RTX A1000)
+- NVIDIA CUDA drivers installed, see https://developer.nvidia.com/cuda-downloads
 - Python 3.x
 
 To install the required libraries, navigate to the directory where the `requirements.txt` is located and run this command in your shell:
