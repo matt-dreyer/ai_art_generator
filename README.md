@@ -9,8 +9,6 @@ This script generates AI-based artwork based on a text prompt. It uses various m
 - NVIDIA CUDA drivers installed, see https://developer.nvidia.com/cuda-downloads
 - Python 3.x
 
-To install the required libraries, navigate to the directory where the `requirements.txt` is located and run this command in your shell:
-
 ## Text-to-Image Models
 By default the script is configured to automatically download and use several models hosted by Hugging Face. The user has the option to manually download and use .safetensor models that can be found on various websites.
 
@@ -29,9 +27,13 @@ Models included by default include:
 
 ## Installation
 
+First download the repo from GitHub by running this command in your shell:
+
 ```bash
 git clone https://github.com/matt-dreyer/ai_art_generator.git
 ```
+
+To install the required libraries, navigate to the directory where the `requirements.txt` is located and run this command in your shell:
 
 ```bash
 pip install -r requirements.txt
