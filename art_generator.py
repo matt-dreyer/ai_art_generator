@@ -21,7 +21,7 @@ def generate_local_model_images(prompt, watermarks):
 
     # If no local models, return
     if not model_files:
-        print("\nNo local models found. Moving on to Hugging Face.")
+        print("No local models found.")
         return
 
     collage_list = []
@@ -80,9 +80,7 @@ def generate_image(model_id, prompt, watermarks):
         image_name = "genart-" + model_name[1] + ".png"
         image.save(os.path.join(output_dir, image_name))
 
-    # Check if the output directory exists, if not, create it
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+
 
     # save the image
     image_name = "genart-" + model_name[1] + ".png"
@@ -216,7 +214,11 @@ def main():
     parser.add_argument('--no-collage', action='store_true', help='Disable creation of collage')
     args = parser.parse_args()
 
+    # Check if the output directory exists, if not, create it
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
+        
     # Try to read the prompt from "prompt.txt", else ask user for input
     try:
         with open("prompt.txt", "r") as file:
