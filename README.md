@@ -25,6 +25,9 @@ Models included by default include:
  - runwayml/stable-diffusion-v1-5
  - stabilityai/stable-diffusion-2-1
 
+### Example Output (index.html)
+![Example Output](https://github.com/matt-dreyer/.github/blob/main/ai_art_generator_output.png)
+
 ## Installation
 
 First download the repo from GitHub by running this command in your shell:
