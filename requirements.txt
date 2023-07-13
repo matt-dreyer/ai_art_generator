@@ -2,7 +2,6 @@ torch
 matplotlib
 numpy
 Pillow
-glob
 opencv-python
 argparse
 diffusers
