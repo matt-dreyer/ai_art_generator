@@ -21,7 +21,7 @@ def generate_local_model_images(prompt, watermarks):
 
     # If no local models, return
     if not model_files:
-        print("No local models found.")
+        print("\nNo local models found. Moving on to Hugging Face.")
         return
 
     collage_list = []
