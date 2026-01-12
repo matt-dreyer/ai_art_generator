@@ -36,6 +36,13 @@ First download the repo from GitHub by running this command in your shell:
 git clone https://github.com/matt-dreyer/ai_art_generator.git
 ```
 
+Create a virtual environment to install into (pretty much required for Linux).
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+```
+
 To install the required libraries, navigate to the directory where the `requirements.txt` is located and run this command in your shell:
 
 ```bash
