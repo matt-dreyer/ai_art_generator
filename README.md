@@ -38,6 +38,7 @@ git clone https://github.com/matt-dreyer/ai_art_generator.git
 
 Create a virtual environment to install into (pretty much required for Linux).
 ```bash
+cd ai_art_generator
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
