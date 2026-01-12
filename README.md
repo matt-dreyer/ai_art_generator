@@ -5,7 +5,7 @@ This script generates AI-based artwork based on a text prompt. It uses various m
 
 
 ### Requirements
-- PC with an NVIDIA GPU (tested on a Dell Precision 5570 laptop with integrated RTX A1000)
+- PC with an NVIDIA GPU (tested on a Dell Precision 5570 laptop with integrated RTX A1000, also tested with a GeForce RTX 5070ti)
 - NVIDIA CUDA drivers installed, see https://developer.nvidia.com/cuda-downloads
 - Python 3.x
 
