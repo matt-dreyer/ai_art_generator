@@ -71,7 +71,7 @@ def generate_image(model_id, prompt, watermarks):
     # Add watermark
     if watermarks:
         draw = ImageDraw.Draw(image)
-        font = ImageFont.truetype("arial.ttf", 14)
+        font = get_default_font(14)
         watermark_text = f"{model_name[1]}"
         draw.text((11, 11), watermark_text, fill=(0, 0, 0, 128), font=font)  # Shadow
         draw.text((10, 10), watermark_text, fill=(255, 255, 255, 128), font=font)  # Text
@@ -188,6 +188,43 @@ def create_html(prompt):
     # open the file in the default web browser
     os.startfile(os.path.join(output_dir, "index.html"))
 
+def get_default_font(size=14, verbose=False):
+    import platform
+    from PIL import ImageFont
+
+    system = platform.system()
+    if verbose:
+        print(f"Detected OS: {system}")
+
+    font_paths = {
+        "Windows": [
+            r"C:\Windows\Fonts\arial.ttf",
+            r"C:\Windows\Fonts\segoeui.ttf",
+        ],
+        "Linux": [
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        ],
+        "Darwin": [
+            "/System/Library/Fonts/Supplemental/Arial.ttf",
+            "/System/Library/Fonts/Helvetica.ttc",
+        ],
+    }.get(system, [])
+
+    for path in font_paths:
+        try:
+            if verbose:
+                print(f"Trying font: {path}")
+            return ImageFont.truetype(path, size)
+        except OSError:
+            pass
+
+    if verbose:
+        print("Falling back to PIL default font")
+
+    return ImageFont.load_default()
+
+
 
 ########################################################################
 def main():
@@ -249,3 +286,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
